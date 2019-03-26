@@ -19,6 +19,7 @@ class PetsController < ApplicationController
     @pet.save
 
     redirect_to pets_path
+    flash[:notice] = "Successfully Created Pet"
 
   end
 
