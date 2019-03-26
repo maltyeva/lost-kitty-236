@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <h1>Lost Kitty</h1>
+    <% @pets.each do |pet| %>
+      <div class="col col-xs-12 col-sm-4">
+        <h3><%= link_to pet.name, pet_path(pet) %>
+          - <%= pet.species %></h3>
+        <p><%= pet.address %></p>
+        <p><%= pet.found_on.strftime('%b %e, %l:%M %p') %></p>
+        <p><%= pet.healthiness %></p>
+        <%= link_to '🐶', pet_path(pet), method: :delete, data: {confirm: "Are you sure you want to delete this cute #{pet.species}?"} %>
+      </div>
+    <% end %>
+    <!-- link_to "button" path -->
+    <p><%= link_to "Add a new pet", new_pet_path %></p>
+  </div>
+</div>

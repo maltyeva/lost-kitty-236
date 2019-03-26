@@ -1,0 +1,8 @@
+<h3><%= @pet.name %>
+  - <%= @pet.species %></h3>
+<p><%= @pet.address %></p>
+<p><%= @pet.found_on.strftime('%b %e, %l:%M %p') %></p>
+<p><%= @pet.healthiness %></p>
+<p><%= @pet.found %></p>
+<p><%= link_to "Edit", edit_pet_path(@pet) %></p>
+<%= link_to "Back", pets_path  %>

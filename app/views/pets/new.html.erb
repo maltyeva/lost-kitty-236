@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <%= simple_form_for(@pet) do |f| %>
+        <%= f.input :species, collection: %w(dog cat rabbit ferret), as: :radio_buttons %>
+        <%= f.input :address, placeholder: "Shanghai" %>
+        <%= f.input :name, hint: "If you don't know the name, add the description" %>
+        <%= f.input :healthiness %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
